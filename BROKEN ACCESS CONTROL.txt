@@ -1,0 +1,33 @@
+BROKEN ACCESS CONTROL
+
+UNPROTECTED ADMIN FUNCTIONALITY
+You can find this through recon, robots.txt, fuzzing/content-discovery etc to look for an admin endpoint.
+
+Header Based
+X-ORIGIN-URL in some app frameworks.
+REFERER - /admin to go to /admin/users
+
+Bypassing URL Based Controls
+Appending .extension at the end of the url.
+Appending trailing slash
+The header based can work here as well
+
+Method bypass. By changing method from POST to GET and viceversa
+
+Hidden parameters.
+
+Identifier that is editable in the headers eg cookies or session token.
+
+Parameters in the URL that are editable
+
+Redirect but using view source to reveal sensitive info.
+
+
+
+PREVENTION
+Defense in depth.
+Never rely on obsfucation.
+use single application-wide mechanism for access control.
+Deny access by default enable for userid - in code.
+Tests and audits.
+

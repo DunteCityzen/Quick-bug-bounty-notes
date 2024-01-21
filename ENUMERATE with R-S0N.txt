@@ -1,0 +1,19 @@
+ENUMERATION
+Comes after recon.=
+Here we look at:
+	* endpoints: Hidden, old ones susceptible to new vulns. In big applications.
+	* parameters
+	* mechanisms like authentication, file uploads, templating engine. This give you an idea on what attacks to try.
+	* unauthenticated testing. What can unauthenticated user do.
+	* Content security policy. what thing can be loaded incase we find an htmli or xss and where can we load them from. We can then infiltrate the 3rd party service provider
+	* Toggle another users privacy policy on or off.
+	* Session configuration bugs. Session fixation. signout and session token still works.
+	* Sensitive info in local storage? If yes, investigate.
+	* Injection areas: path, cookies, parameters etc.
+	* Check the object returned when creating or updating user info or any info. If extra key-value pair returned in response, when editing info, try to control it in your intercepted request. If controllable, eg avatar url, you can inject into it and force users to load it anytime they view your profile picture.
+
+Scanners
+We shouldn't fully rely on them for reporting bugs but we should leverage them and their advisory to guide you into more investigation.
+Param miner, jsminer, burpscanner, discover content, burp extensions like httprequestsmuggler.
+
+Rson Methodology
